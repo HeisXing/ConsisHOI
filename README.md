@@ -1,7 +1,7 @@
 # Consishoi — Consistent Human-Object Interaction Generation (SDXL extension)
 
 <p align="center">
-	<img src="assets/introduction.jpg" height=100>
+	<img src="assets/introduction.jpg">
 </p>
 
 <div align="center">
