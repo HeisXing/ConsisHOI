@@ -1,7 +1,7 @@
 # Consishoi — Consistent Human-Object Interaction Generation (SDXL extension)
 
 <p align="center">
-	<img src="assets/introduction.pdf" height=100>
+	<img src="assets/introduction.jpg" height=100>
 </p>
 
 <div align="center">
@@ -26,7 +26,9 @@ conda activate consishoi
 pip install -r requirements.txt
 ```
 
-**Usage — Inference**
+**🛠️Usage**
+
+***Inference***
 
 Generate one image with the unified pipeline:
 
@@ -54,7 +56,7 @@ interaction_cfg = {
 }
 ```
 
-**Usage — Training**
+***Training***
 
 Train with a single model path for base weights:
 
