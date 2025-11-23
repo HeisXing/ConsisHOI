@@ -1,28 +1,22 @@
 # Consishoi — Consistent Human-Object Interaction Generation (SDXL extension)
 
 <p align="center">
-	<img src="assets/introduction.png" height=100>
+	<img src="assets/introduction.pdf" height=100>
 </p>
 
 <div align="center">
 
-A codebase for training and inference of a Consistent HOI (Human-Object Interaction) conditioned Stable Diffusion XL variant.
+This is the official code repository for ConsisHOI, a framework that enables the generation of consistent Human-Object Interaction (HOI) images adhering to precise layout constraints, built upon Stable Diffusion XL.
 
 </div>
 
 ---
 
-**Project status**: Work-in-progress. Key files:
-
-- `train.py` — training entrypoint.
-- `inference.py` — single-image inference script.
-- `pipeline_consishoi_sdxl.py` — custom SDXL pipeline integrating HOI and ID conditioning.
-- `consishoi_unet_2d_condition.py` — custom UNet module.
 
 **Requirements**
 
-- Python 3.10+ (Conda recommended)
-- See root `requirements.txt` for full dependency list. Common packages: `torch`, `diffusers` (local fork), `transformers`, `accelerate`, `xformers` (optional), `facexlib`, `insightface`, `opencv-python`, `Pillow`.
+- Python 3.10+
+- See root `requirements.txt` for full dependency list.
 
 Quick setup:
 
@@ -41,7 +35,7 @@ python inference.py \
 	--consishoi_model_path /path/to/consishoi_model_dir \
 	--id_image /path/to/id_image.png \
 	--prompt "a person is riding a motorcycle" \
-	--out_image ./OUTPUTS_new/output.png \
+	--out_image ./OUTPUTS/output.png \
 	--steps 50 \
     --scale 5.0 \
     --device cuda
@@ -73,13 +67,6 @@ python train.py \
 ```
 
 - If GPU memory is tight, consider enabling CPU offload in the pipeline or using lower `dtype` where supported.
-
-
-**Citations & References**
-
-This project is based on the InteractDiffusion and PuLID methods for Human-Object Interaction and ID-conditioned generation, and also draws on related HOI/consistent-generation works.
-
-If you use this code in published work, please cite the original InteractDiffusion and PuLID works and any other papers that motivated your particular model choices.
 
 **License & Contact**
 
