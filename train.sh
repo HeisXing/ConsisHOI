@@ -1,0 +1,11 @@
+CUDA_VISIBLE_DEVICES=0 python train.py \
+    --lr 5e-6 \
+    --batch_size 4 \
+    --gradient_accumulation_steps 1 \
+    --epochs 15 \
+    --mixed_ratios_mode "ratios_114" \
+    --lambda_lf 0.1 \
+    --lambda_hf 0.3 \
+    --low_freq_radius_loss 0.02 \
+    --high_freq_radius_loss 0.7 \
+    --consishoi_dataset_path ./DATA
